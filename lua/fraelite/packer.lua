@@ -1,5 +1,4 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
@@ -15,7 +14,7 @@ return require('packer').startup(function(use)
         run = ':TSUpdate'
     }
 
-    -- LSP packages (Fold present in line 21)
+    -- LSP packages 
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -37,26 +36,18 @@ return require('packer').startup(function(use)
         }
     }
 
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
+    use 'nvim-lualine/lualine.nvim'
 
-    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+    use 'akinsho/bufferline.nvim'
 
     use 'norcalli/nvim-colorizer.lua'
     use 'windwp/nvim-ts-autotag'
+    use 'nvim-lua/plenary.nvim'
 
     -- Telescope 
-    use {
-      'nvim-telescope/telescope.nvim', tag = '0.1.5',
-    -- or                            , branch = '0.1.x',
-      requires = { {'nvim-lua/plenary.nvim'} }
-    }
+    use { 'nvim-telescope/telescope.nvim', tag = '0.1.5' }
     use {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
-        requires = { {"nvim-lua/plenary.nvim"} }
     }
-
 end)
