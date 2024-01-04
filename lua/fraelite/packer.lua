@@ -5,6 +5,7 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
+    use "folke/tokyonight.nvim"
 
     -- web icons
     use 'nvim-tree/nvim-web-devicons'
@@ -41,7 +42,6 @@ return require('packer').startup(function(use)
     use 'akinsho/bufferline.nvim'
 
     use 'norcalli/nvim-colorizer.lua'
-    use 'windwp/nvim-ts-autotag'
     use 'nvim-lua/plenary.nvim'
 
     -- Telescope 

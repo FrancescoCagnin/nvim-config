@@ -42,7 +42,7 @@ require("catppuccin").setup({
     },
 })
 --  setup must be called before loading
- vim.cmd.colorscheme "catppuccin-mocha"
+--vim.cmd.colorscheme "catppuccin-mocha"
 
 --  relative line numbers were too hard to read with the standard setup
 vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#85c1dc' })
